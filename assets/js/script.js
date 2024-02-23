@@ -10,4 +10,4 @@ const images = [
   "img/05.jpg",
 ];
 
-//I create the cyle creo ciclo per aggiungere elementi nell' HTML
+//I create the cyle to add elements in HTML
