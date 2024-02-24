@@ -10,14 +10,28 @@
   margin: auto;
   display: flex;
   justify-content: center;
-  border: 1px dashed;
+}
+
+.items {
+  position: relative;
+  margin-top: 50px;
+  height: 300px;
+}
+
+.item {
+  height: 300px;
+  margin: auto;
+  display: none;
 }
 
 .item img {
   width: 700px;
   height: 300px;
   object-fit: cover;
-  display: none;
+}
+
+.item.active {
+  display: block;
 }
 
 .btn-prev,
@@ -32,9 +46,4 @@
   left: 50%;
   transform: translate(-50%);
   bottom: 2%;
-  align-self: ;
-}
-/* class="item active" */
-.item.active img {
-  display: inline-block;
 }
