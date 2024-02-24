@@ -10,12 +10,18 @@
   margin: auto;
   display: flex;
   justify-content: center;
+  position: relative;
 }
 
 .items {
   position: relative;
   margin-top: 50px;
   height: 300px;
+}
+.item img {
+  width: 700px;
+  height: 300px;
+  object-fit: cover;
 }
 
 .item {
@@ -25,8 +31,8 @@
 }
 
 .item img {
-  width: 700px;
-  height: 300px;
+  width: 360px;
+  height: 400px;
   object-fit: cover;
 }
 
@@ -36,14 +42,35 @@
 
 .btn-prev,
 .btn-next {
-  background-color: white;
-  border-radius: 50%;
-  display: inline-block;
-  padding: 5px;
-  cursor: pointer;
+  background-color: rgba(200, 200, 200, 0.8);
   position: absolute;
-  z-index: 100;
-  left: 50%;
-  transform: translate(-50%);
-  bottom: 2%;
+  font-size: 18px;
+  color: #333;
+  cursor: pointer;
+}
+
+.btn-prev {
+  top: 5%; /* dal bordo superiore */
+  left: 50%; /* Centra orizzontalmente rispetto al container .items */
+  transform: translate(-50%, 0);
+}
+
+.btn-next {
+  bottom: 5%; /* Aumentato il valore per spostare più in basso */
+  left: 50%; /* Centra orizzontalmente rispetto al container .items */
+  transform: translate(-50%, 0);
+  order: 1;
+}
+
+.btn-prev::before,
+.btn-next::before {
+  content: "\2191"; /* Unicode per freccia verso l'alto */
+  font-size: 20px;
+  color: #333333;
+
+  /* Colore del testo */
+}
+
+.btn-next::before {
+  content: "\2193";
 }
