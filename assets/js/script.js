@@ -7,13 +7,13 @@ const images = [
   "img/05.webp", // 4
 ];
 
-// Select the container of all slides in the HTML
+// Selecting the container of all slides in the HTML
 const itemsContainer = document.querySelector(".items");
 
-// Log the itemsContainer to the console
+// Print the itemsContainer to the console
 console.log(itemsContainer);
 
-// Loop through the images array to create and append HTML elements for each image
+// Loop through the images array to create and append HTML elements for each img
 for (let i = 0; i < images.length; i++) {
   const photo = images[i];
   let item = document.createElement("div");
@@ -21,7 +21,7 @@ for (let i = 0; i < images.length; i++) {
   // Add the "item" class to the created element
   item.classList.add("item");
 
-  // Set the inner HTML of the created element with an image tag
+  // Set the innr HTML of the created element with an img tag
   item.innerHTML = `<img src="assets/${photo}"/>`;
 
   // Log the created item to the console
@@ -52,7 +52,7 @@ btnNext.addEventListener("click", function () {
 
   // Check if the current element is the last in the sequence
   if (currentImageIndex === images.length - 1) {
-    // If it is the last, set the index to 0 (beginning of the sequence)
+    // If it is the last, config the index to 0 (beginning of the sequence)
     currentImageIndex = 0;
   } else {
     // If not the last, increment the index by 1

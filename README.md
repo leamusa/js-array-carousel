@@ -39,3 +39,32 @@ IF the first image is active and the user clicks the arrow to go to the previous
 2. comment (obscure) some elements to be able to reproduce them dynamically in js. We can then use them as "templates".
 3. We always write first by points our algorithm in Italian to understand what we want to do
 4. At the right time (ihihhi will be up to you to figure out which one) answer this question: "How many cycles do you need?"
+
+# tools
+
+Dynamic cyclic of scrolling effect of imgs, (both) forward and backward:
+
+1. Create an array `img` with 5 images.
+
+2. Select items with `document.querySelector` and print container's items.
+
+   - Use `document.querySelector` to select the container's items (e.g., `.items`).
+   - print the selected container to the console using `console.log`.
+
+3. Dynamically generate HTML elements Creating a loop through `for`:
+
+   - a. Initialize a loop variable `i` with `let i = 0`.
+   - b. Continue the loop until `i` is less than the length of the array (`images.length`).
+   - c. Increment `i` by 1 in each iteration (`i++`).
+   - Inside the loop:
+     - Extract current image using `const photo = images[i];`.
+     - Create a new `div` element for each image using `let item = document.createElement("div");`.
+
+4. Configuration of init element (index 0) as active with the class "active":
+
+   - Add the class "active" to the first element in the loop to ensure it is initially displayed.
+
+5. Connect "next" and "prev" buttons to functions updating the active img:
+   - a. Add an event listener to the "Next" button, (instructing it) to increment the index (`incr++`).
+   - b. Add an event listener to the "Prev" button, (instructing it) to decrement the index (`decr--`).
+   - c. Inside the event listeners, add or remove the "active" class based on the current img.
